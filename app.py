@@ -21,7 +21,7 @@ def get_default_bucket_data():
     aws_access_key_id, aws_secret_access_key = get_environ_vars()
     
     s3_client = AWS_S3(aws_access_key_id, aws_secret_access_key)
-    result = s3_client.get_object(bucket_name="kartikaycloudresume")
+    result = s3_client.get_object(bucket_name="one2n-assignment")
     return result
 
 @app.get("/list-bucket-content/<path>")
@@ -29,7 +29,7 @@ def get_bucket_data(path):
     aws_access_key_id, aws_secret_access_key = get_environ_vars()
 
     s3_client = AWS_S3(aws_access_key_id, aws_secret_access_key)
-    result = s3_client.get_object(bucket_name="kartikaycloudresume", prefix=path)
+    result = s3_client.get_object(bucket_name="one2n-assignment", prefix=path)
     return result
 
 if __name__ == "__main__":
