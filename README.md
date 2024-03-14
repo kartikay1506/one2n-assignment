@@ -94,9 +94,7 @@ But for some reason, if the user inputs the wrong path or the path does not exis
 ###
 
 ## Demo
-Here's a small demo of the application working.
-
-![Demo Video]()
+Here's a small [Demo](https://one2n-assignment-demo.s3.ap-south-1.amazonaws.com/Demo+Video.mov) of the application working.
 
 ###
 
