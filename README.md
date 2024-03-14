@@ -47,20 +47,20 @@ Our application is finally run by gunicorn and nginx server.
 ###
 > We've stored sensitive information like github token, aws access key and aws secret access keys in the AWS Parametet store, which we're retrieving later on by use aws cli. This is made possible by attaching the relevant IAM role to the ec2 instance hosting our application.
 ###
-![AWS Parameter Store](/one2n-assignment/docs/Screenshot-7.png)
+![AWS Parameter Store](/docs/Screenshot-7.png)
 ###
 
 The structure of our AWS S3 bucket looks something like below, wehere we have multiple files and folders of varying nesting levels within the bucket.
 ###
-![Bucket Name](/one2n-assignment/docs/Screenshot-1.png)
+![Bucket Name](/docs/Screenshot-1.png)
 ###
 
 ###
-![Bucket Content](/one2n-assignment/docs/Screenshot-2.png)
+![Bucket Content](/docs/Screenshot-2.png)
 ###
 
 ###
-![Bucket Path Content](/one2n-assignment/docs/Screenshot-3.png)
+![Bucket Path Content](/docs/Screenshot-3.png)
 ###
 ###
 
@@ -70,25 +70,25 @@ The structure of our AWS S3 bucket looks something like below, wehere we have mu
 When the user hits the endpoint `<instance_ip>:8080/`, they're greeted by a simple welcome page
 
 ###
-![Welcome Page](/one2n-assignment/docs/Screenshot-8.png)
+![Welcome Page](/docs/Screenshot-8.png)
 ###
 
 If the user does not give any path in the endpoint `<instance_ip>:8080/list-bucket-content`, they get whole content of the s3 bucket.
 
 ###
-![Bucket Default Content](/one2n-assignment/docs/Screenshot-4.png)
+![Bucket Default Content](/docs/Screenshot-4.png)
 ###
 
 If the user provides a path in the endpoint `<instance_ip>:8080/list-bucket-content/<path>`, the endpoint returns the content of the path that is available in the bucket.
 
 ###
-![Bucket Path Content](/one2n-assignment/docs/Screenshot-5.png)
+![Bucket Path Content](/docs/Screenshot-5.png)
 ###
 
 But for some reason, if the user inputs the wrong path or the path does not exist in the bucket, then the application simply returns 404 not found error.
 
 ###
-![Bucket 404 Error](/one2n-assignment/docs/Screenshot-6.png)
+![Bucket 404 Error](/docs/Screenshot-6.png)
 ###
 
 ###
